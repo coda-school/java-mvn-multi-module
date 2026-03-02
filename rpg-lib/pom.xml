@@ -10,19 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>school.coda.rpg</groupId>
     <artifactId>rpg-lib</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-        </dependency>
-    </dependencies>
+
 </project>

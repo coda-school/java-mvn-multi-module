@@ -58,4 +58,19 @@
         </pluginManagement>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>coda_lab</id>
+            <url>https://nexus.baldir.fr/repository/coda_lab/</url>
+            <name>coda_lab</name>
+        </repository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>coda_lab</id>
+            <url>https://nexus.baldir.fr/repository/coda_lab/</url>
+            <name>coda_lab</name>
+        </repository>
+    </repositories>
+
 </project>
