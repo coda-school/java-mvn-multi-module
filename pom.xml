@@ -72,5 +72,7 @@
             <name>coda_lab</name>
         </repository>
     </repositories>
-
+<scm>
+    <url>https://github.com/coda-school/java-mvn-multi-module</url>
+</scm>
 </project>
