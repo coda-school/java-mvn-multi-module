@@ -31,10 +31,8 @@ public class Dungeon extends Party {
         int money = randomGenerator.nextInt(0, 50);
         int hp = randomGenerator.nextInt(10, 20);
         Warrior warrior = new Warrior(name,
-                attack,
-                defense,
-                money,
-                hp);
+                defense, hp, money, attack
+        );
         this.rpgCharacters.add( warrior);
         this.attackers.add(warrior);
 
@@ -47,8 +45,7 @@ public class Dungeon extends Party {
         int hp = randomGenerator.nextInt(5, 10);
         Priest priest = new Priest(name,
                 defense,
-                money,
-                hp,
+                hp, money,
                 healing
                 );
         this.rpgCharacters.add( priest);
@@ -62,10 +59,8 @@ public class Dungeon extends Party {
         int money = randomGenerator.nextInt(0, 500);
         int hp = randomGenerator.nextInt(50, 100);
         Warrior warrior = new Warrior(name,
-                attack,
-                defense,
-                money,
-                hp);
+                defense, hp, money, attack
+        );
         this.rpgCharacters.add( warrior);
         this.attackers.add(warrior);
 

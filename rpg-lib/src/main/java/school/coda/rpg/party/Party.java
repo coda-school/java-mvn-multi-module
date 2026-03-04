@@ -131,10 +131,8 @@ public class Party {
         int money = randomGenerator.nextInt(0, 50);
         int hp = randomGenerator.nextInt(5, 10);
         Mage mage = new Mage(name,
-                attack,
-                defense,
-                money,
-                hp);
+                defense, hp, money, attack
+        );
         this.rpgCharacters.add(mage);
         this.attackers.add(mage);
     }
@@ -145,10 +143,8 @@ public class Party {
         int money = randomGenerator.nextInt(0, 70);
         int hp = randomGenerator.nextInt(5, 15);
         Thief thief = new Thief(name,
-                attack,
-                defense,
-                money,
-                hp);
+                defense, hp, money, attack
+        );
         this.rpgCharacters.add(thief);
         this.attackers.add(thief);
     }
@@ -161,10 +157,9 @@ public class Party {
         int attack = randomGenerator.nextInt(3, 8);
         Paladin paladin = new Paladin(name,
                 defense,
-                money,
-                hp,
-                healing,
-                attack);
+                hp, money,
+                attack, healing
+        );
 
         this.rpgCharacters.add(paladin);
         this.attackers.add(paladin);
@@ -177,10 +172,8 @@ public class Party {
         int money = randomGenerator.nextInt(0, 10);
         int hp = randomGenerator.nextInt(15, 20);
         Warrior warrior = new Warrior(name,
-                attack,
-                defense,
-                money,
-                hp);
+                defense, hp, money, attack
+        );
         this.rpgCharacters.add(warrior);
         this.attackers.add(warrior);
     }
@@ -192,8 +185,7 @@ public class Party {
         int hp = randomGenerator.nextInt(15, 20);
         Priest priest = new Priest(name,
                 defense,
-                money,
-                hp,
+                hp, money,
                 healing);
         this.rpgCharacters.add(priest);
         this.healers.add(priest);

@@ -7,8 +7,8 @@ public class Priest extends RpgCharacter implements Healer {
 
     private final Healing healing;
 
-    public Priest(String name, int defense, int money, int hp, int healing) {
-        super(name, defense, money, hp);
+    public Priest(String name, int defense, int hp, int money, int healing) {
+        super(name, defense, hp, money);
         this.healing = new Healing(healing + 2);
     }
 

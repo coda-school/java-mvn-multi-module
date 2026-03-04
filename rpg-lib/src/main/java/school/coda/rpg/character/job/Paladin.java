@@ -11,8 +11,8 @@ public class Paladin extends RpgCharacter implements Healer, Attacker {
     private final Healing healing;
     private final Damage damage;
 
-    public Paladin(String name, int defense, int money, int hp, int healing, int attack) {
-        super(name, defense, money, hp);
+    public Paladin(String name, int defense, int hp, int money, int attack, int healing) {
+        super(name, defense, hp, money);
         this.healing = new Healing(healing);
         this.damage = new Damage(attack);
     }

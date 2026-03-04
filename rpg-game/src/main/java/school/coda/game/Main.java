@@ -1,11 +1,28 @@
 package school.coda.game;
 
+import school.coda.rpg.character.job.Mage;
+import school.coda.rpg.character.job.Paladin;
+import school.coda.rpg.character.job.Priest;
+import school.coda.rpg.character.job.RpgCharacter;
+import school.coda.rpg.character.job.Thief;
+import school.coda.rpg.character.job.Tourist;
+import school.coda.rpg.character.job.Warrior;
 import school.coda.rpg.party.Dungeon;
 import school.coda.rpg.party.Party;
 
-public  class Main {
+public class Main {
 
     static void main() {
+
+        RpgCharacter m = new Mage("", 1, 1, 1, 1);
+        RpgCharacter w = new Warrior("", 1, 1, 1, 1);
+        RpgCharacter th = new Thief("", 1, 1, 1, 1);
+        RpgCharacter pa = new Paladin("", 1, 1, 1, 1, 1);
+        RpgCharacter pr = new Priest("", 1, 1, 1, 1);
+        RpgCharacter to = new Tourist("", 1, 1, 1);
+        RpgCharacter r = new RpgCharacter("", 1, 1, 1);
+
+
         Party party = new Party();
         System.out.println("-------");
         System.out.println("Party");

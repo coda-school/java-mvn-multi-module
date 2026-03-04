@@ -12,7 +12,7 @@ public class RpgCharacter {
     private int money;
     private int hp;
 
-    public RpgCharacter(String name, int defense, int money, int hp) {
+    public RpgCharacter(String name, int defense, int hp, int money) {
         this.name = name;
         this.defense = defense;
         this.money = money;

@@ -6,8 +6,8 @@ import school.coda.rpg.character.abilities.damage.Damage;
 public class Warrior extends RpgCharacter implements Attacker {
     private final Damage damage;
 
-    public Warrior(String name, int attack, int defense, int money, int hp) {
-        super(name, defense, money, hp);
+    public Warrior(String name, int defense, int hp, int money, int attack) {
+        super(name, defense, hp, money);
         this.damage = new Damage(attack + 1);
     }
 

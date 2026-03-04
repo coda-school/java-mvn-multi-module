@@ -9,8 +9,8 @@ public class Mage extends RpgCharacter implements Attacker {
     private final Damage damage;
     private final Healing healing;
 
-    public Mage(String name, int attack, int defense, int money, int hp) {
-        super(name, defense, money, hp);
+    public Mage(String name, int defense, int hp, int money, int attack) {
+        super(name, defense, hp, money);
         this.damage = new Damage(attack);
         this.healing = new Healing(1);
     }

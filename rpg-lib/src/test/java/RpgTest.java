@@ -20,10 +20,10 @@ public class RpgTest {
     })
     void dealing_damage_against_unarmored(int attack, int expectedOpponentHp) {
 
-        var attacker = new Mage("Dédé", attack, 0, 20, 10);
+        var attacker = new Mage("Dédé", 0, 10, 20, attack);
 
         int hp = 12;
-        var defender = new RpgCharacter("Robert", 0, 5, hp);
+        var defender = new RpgCharacter("Robert", 0, hp, 5);
 
         attacker.attack(defender);
 
@@ -39,10 +39,10 @@ public class RpgTest {
     })
     void dealing_damage_against_armored(int defense, int expectedOpponentHp) {
 
-        var attacker = new Mage("Dédé", 2, 0, 20, 10);
+        var attacker = new Mage("Dédé", 0, 10, 20, 2);
 
         int hp = 12;
-        var defender = new RpgCharacter("Robert", defense, 20, hp);
+        var defender = new RpgCharacter("Robert", defense, hp, 20);
 
         attacker.attack(defender);
 
@@ -52,10 +52,10 @@ public class RpgTest {
 
     @Test
     void warrior_deals_plus_1_damage() {
-        var warrior = new Warrior("Dédé", 1, 0, 20, 10);
+        var warrior = new Warrior("Dédé", 0, 10, 20, 1);
 
         int hp = 12;
-        var defender = new RpgCharacter("Robert", 0, 0, hp);
+        var defender = new RpgCharacter("Robert", 0, hp, 0);
 
         warrior.attack(defender);
 
@@ -64,8 +64,8 @@ public class RpgTest {
 
     @Test
     void thief_steals_on_attack() {
-        var thief = new Thief("Thomas", 1, 0, 20, 10);
-        var defender = new RpgCharacter("Robert", 1, 5, 12);
+        var thief = new Thief("Thomas", 0, 10, 20, 1);
+        var defender = new RpgCharacter("Robert", 1, 12, 5);
 
         thief.attack(defender);
 
@@ -81,8 +81,8 @@ public class RpgTest {
             "0, 0, 20",
     })
     void thief_steals(int opponentsMoney, int expectedOpponentMoney, int expectedThiefMoney) {
-        var thief = new Thief("Thomas", 1, 0, 20, 10);
-        var defender = new RpgCharacter("Robert", 1, opponentsMoney, 12);
+        var thief = new Thief("Thomas", 0, 10, 20, 1);
+        var defender = new RpgCharacter("Robert", 1, 12, opponentsMoney);
 
         thief.attack(defender);
 
@@ -93,9 +93,9 @@ public class RpgTest {
     @Test
     void mage_recovers_1_health() {
         int hp = 10;
-        var mage = new Mage("Mireille", 1, 0, 20, hp);
+        var mage = new Mage("Mireille", 0, hp, 20, 1);
         int attack = 2;
-        var thief = new Thief("Robert", attack, 0, 12, 10);
+        var thief = new Thief("Robert", 0, 10, 12, attack);
 
         // mage must have lost HP to heal
         thief.attack(mage);
